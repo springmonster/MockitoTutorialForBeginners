@@ -1,10 +1,13 @@
 ## What You Will Learn during this Step:
+
 - Understand what a Spy does?
 - Creating a spy with Mockito?
 - Overriding specific methods in a spy?
 
 ## Files List
+
 ### /pom.xml
+
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -34,7 +37,9 @@
 	</dependencies>
 </project>
 ```
+
 ### /src/main/java/com/in28minutes/business/TodoBusinessImpl.java
+
 ```
 package com.in28minutes.business;
 
@@ -72,7 +77,9 @@ public class TodoBusinessImpl {
 	}
 }
 ```
+
 ### /src/main/java/com/in28minutes/data/api/TodoService.java
+
 ```
 package com.in28minutes.data.api;
 
@@ -87,7 +94,9 @@ public interface TodoService {
 
 }
 ```
+
 ### /src/test/java/com/in28minutes/business/TodoBusinessImplMockitoInjectMocksTest.java
+
 ```
 package com.in28minutes.business;
 
@@ -185,7 +194,9 @@ public class TodoBusinessImplMockitoInjectMocksTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/business/TodoBusinessImplMockitoRulesTest.java
+
 ```
 package com.in28minutes.business;
 
@@ -287,7 +298,9 @@ public class TodoBusinessImplMockitoRulesTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java
+
 ```
 package com.in28minutes.business;
 
@@ -384,7 +397,9 @@ public class TodoBusinessImplMockitoTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java
+
 ```
 package com.in28minutes.business;
 
@@ -409,7 +424,9 @@ public class TodoBusinessImplStubTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/data/stub/TodoServiceStub.java
+
 ```
 package com.in28minutes.data.stub;
 
@@ -429,7 +446,9 @@ public class TodoServiceStub implements TodoService {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/mockito/FirstMockitoTest.java
+
 ```
 package com.in28minutes.mockito;
 
@@ -446,7 +465,9 @@ public class FirstMockitoTest {
 
 }
 ```
+
 ### /src/test/java/com/in28minutes/mockito/HamcrestMatcherTest.java
+
 ```
 package com.in28minutes.mockito;
 
@@ -489,7 +510,9 @@ public class HamcrestMatcherTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/mockito/ListTest.java
+
 ```
 package com.in28minutes.mockito;
 
@@ -562,7 +585,9 @@ public class ListTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/mockito/SpyTest.java
+
 ```
 package com.in28minutes.mockito;
 

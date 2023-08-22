@@ -1,10 +1,13 @@
 ## What You Will Learn during this Step:
+
 - Set up an Eclipse Project.
 - Set up JUnit and Mockito frameworks.
 - First Green Bar
 
 ## Useful Snippets
-- You should know JUnit. You can find our free JUnit Course here - [JUnit](https://www.udemy.com/course/junit-tutorial-for-beginners-with-java-examples/)
+
+- You should know JUnit. You can find our free JUnit Course
+  here - [JUnit](https://www.udemy.com/course/junit-tutorial-for-beginners-with-java-examples/)
 - Dependencies for JUnit and Mockito are listed below
 
 ```
@@ -23,8 +26,11 @@
         </dependency>
 	</dependencies>
 ```
+
 ## Files List
+
 ### /pom.xml
+
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -48,7 +54,9 @@
 	</dependencies>
 </project>
 ```
+
 ### /src/test/java/com/in28minutes/mockito/FirstMockitoTest.java
+
 ```
 package com.in28minutes.mockito;
 

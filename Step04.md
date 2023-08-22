@@ -1,9 +1,12 @@
 ## What You Will Learn during this Step:
+
 - Your first Mockito code! Hurrah!!!
 - Lets use Mockito to mock TodoService
 
 ## Useful Snippets and References
+
 Easier Static Imports
+
 ```
 Window > Preferences > Java > Editor > Content Assist > Favorites
 org.junit.Assert
@@ -12,13 +15,18 @@ org.mockito.Mockito
 org.hamcrest.Matchers
 org.hamcrest.CoreMatchers
 ```
+
 ## Exercises
+
 - Play around with code
 - Think what JUnit best practises we are NOT adhering to
-- Visit Mockito Official Documentation - [Mockito Documentation] (http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html)
+- Visit Mockito Official
+  Documentation - [Mockito Documentation] (http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html)
 
 ## Files List
+
 ### /pom.xml
+
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -42,7 +50,9 @@ org.hamcrest.CoreMatchers
 	</dependencies>
 </project>
 ```
+
 ### /src/main/java/com/in28minutes/business/TodoBusinessImpl.java
+
 ```
 package com.in28minutes.business;
 
@@ -70,7 +80,9 @@ public class TodoBusinessImpl {
 	}
 }
 ```
+
 ### /src/main/java/com/in28minutes/data/api/TodoService.java
+
 ```
 package com.in28minutes.data.api;
 
@@ -81,7 +93,9 @@ public interface TodoService {
 	public List<String> retrieveTodos(String user);
 }
 ```
+
 ### /src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java
+
 ```
 package com.in28minutes.business;
 
@@ -111,7 +125,9 @@ public class TodoBusinessImplMockitoTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java
+
 ```
 package com.in28minutes.business;
 
@@ -136,7 +152,9 @@ public class TodoBusinessImplStubTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/data/stub/TodoServiceStub.java
+
 ```
 package com.in28minutes.data.stub;
 
@@ -152,7 +170,9 @@ public class TodoServiceStub implements TodoService {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/mockito/FirstMockitoTest.java
+
 ```
 package com.in28minutes.mockito;
 

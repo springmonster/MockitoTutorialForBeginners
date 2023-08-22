@@ -5,9 +5,9 @@ package com.in28minutes.junit.model;
  */
 public interface Collateral {
 
-	long getId();
+    long getId();
 
-	String getName();
+    String getName();
 
-	CollateralType getType();
+    CollateralType getType();
 }

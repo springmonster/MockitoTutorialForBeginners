@@ -1,8 +1,11 @@
 ## What You Will Learn during this Step:
+
 - How to capture an argument which is passed to a mock?
 
 ## Useful Snippets and References
+
 First Snippet
+
 ```
 @Test
     public void captureArgument() {
@@ -20,8 +23,11 @@ First Snippet
         assertEquals("Learn to Dance", argumentCaptor.getValue());
     }
 ```
+
 ## Files List
+
 ### /pom.xml
+
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -45,7 +51,9 @@ First Snippet
 	</dependencies>
 </project>
 ```
+
 ### /src/main/java/com/in28minutes/business/TodoBusinessImpl.java
+
 ```
 package com.in28minutes.business;
 
@@ -82,7 +90,9 @@ public class TodoBusinessImpl {
 	}
 }
 ```
+
 ### /src/main/java/com/in28minutes/data/api/TodoService.java
+
 ```
 package com.in28minutes.data.api;
 
@@ -97,7 +107,9 @@ public interface TodoService {
 
 }
 ```
+
 ### /src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java
+
 ```
 package com.in28minutes.business;
 
@@ -194,7 +206,9 @@ public class TodoBusinessImplMockitoTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java
+
 ```
 package com.in28minutes.business;
 
@@ -219,7 +233,9 @@ public class TodoBusinessImplStubTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/data/stub/TodoServiceStub.java
+
 ```
 package com.in28minutes.data.stub;
 
@@ -239,7 +255,9 @@ public class TodoServiceStub implements TodoService {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/mockito/FirstMockitoTest.java
+
 ```
 package com.in28minutes.mockito;
 
@@ -256,7 +274,9 @@ public class FirstMockitoTest {
 
 }
 ```
+
 ### /src/test/java/com/in28minutes/mockito/ListTest.java
+
 ```
 package com.in28minutes.mockito;
 

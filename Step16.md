@@ -1,14 +1,19 @@
 ## What You Will Learn during this Step:
+
 - Using PowerMock and Mockito to invoke a private Method.
 - PowerMockitoTestingPrivateMethodTest
 
 ## Snippets
+
 ```
 long value = (Long) Whitebox.invokeMethod(systemUnderTest,
 				"privateMethodUnderTest");
 ```
+
 ## Files List
+
 ### /pom.xml
+
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -62,7 +67,9 @@ long value = (Long) Whitebox.invokeMethod(systemUnderTest,
 	</build>
 </project>
 ```
+
 ### /src/main/java/com/in28minutes/business/TodoBusinessImpl.java
+
 ```
 package com.in28minutes.business;
 
@@ -100,7 +107,9 @@ public class TodoBusinessImpl {
 	}
 }
 ```
+
 ### /src/main/java/com/in28minutes/data/api/TodoService.java
+
 ```
 package com.in28minutes.data.api;
 
@@ -115,7 +124,9 @@ public interface TodoService {
 
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/business/ClientBO.java
+
 ```
 package com.in28minutes.junit.business;
 
@@ -132,7 +143,9 @@ public interface ClientBO {
 
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/business/ClientBOImpl.java
+
 ```
 package com.in28minutes.junit.business;
 
@@ -192,7 +205,9 @@ public class ClientBOImpl implements ClientBO {
 	}
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/business/exception/DifferentCurrenciesException.java
+
 ```
 package com.in28minutes.junit.business.exception;
 
@@ -205,7 +220,9 @@ public class DifferentCurrenciesException extends Exception {
 
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/helper/StringHelper.java
+
 ```
 package com.in28minutes.junit.helper;
 
@@ -237,7 +254,9 @@ public class StringHelper {
 
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/model/Amount.java
+
 ```
 package com.in28minutes.junit.model;
 
@@ -249,7 +268,9 @@ public interface Amount {
 	Currency getCurrency();
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/model/AmountImpl.java
+
 ```
 package com.in28minutes.junit.model;
 
@@ -286,7 +307,9 @@ public class AmountImpl implements Amount {
 
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/model/Client.java
+
 ```
 package com.in28minutes.junit.model;
 
@@ -314,7 +337,9 @@ public interface Client {
 
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/model/ClientImpl.java
+
 ```
 package com.in28minutes.junit.model;
 
@@ -404,7 +429,9 @@ public class ClientImpl implements Client {
 
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/model/ClientType.java
+
 ```
 package com.in28minutes.junit.model;
 
@@ -448,7 +475,9 @@ public enum ClientType {
 	}
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/model/Collateral.java
+
 ```
 package com.in28minutes.junit.model;
 
@@ -464,7 +493,9 @@ public interface Collateral {
 	CollateralType getType();
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/model/CollateralImpl.java
+
 ```
 package com.in28minutes.junit.model;
 
@@ -513,7 +544,9 @@ public class CollateralImpl implements Collateral {
 	}
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/model/CollateralType.java
+
 ```
 package com.in28minutes.junit.model;
 
@@ -544,7 +577,9 @@ public enum CollateralType {
 	}
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/model/Currency.java
+
 ```
 package com.in28minutes.junit.model;
 
@@ -564,7 +599,9 @@ public enum Currency {
 	}
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/model/Product.java
+
 ```
 package com.in28minutes.junit.model;
 
@@ -582,7 +619,9 @@ public interface Product {
 	Amount getAmount();
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/model/ProductImpl.java
+
 ```
 package com.in28minutes.junit.model;
 
@@ -644,7 +683,9 @@ public class ProductImpl implements Product {
 	}
 }
 ```
+
 ### /src/main/java/com/in28minutes/junit/model/ProductType.java
+
 ```
 package com.in28minutes.junit.model;
 
@@ -666,7 +707,9 @@ public enum ProductType {
 	}
 }
 ```
+
 ### /src/main/java/com/in28minutes/powermock/SystemUnderTest.java
+
 ```
 package com.in28minutes.powermock;
 
@@ -703,7 +746,9 @@ public class SystemUnderTest {
 	}
 }
 ```
+
 ### /src/main/java/com/in28minutes/powermock/UtilityClass.java
+
 ```
 package com.in28minutes.powermock;
 
@@ -715,7 +760,9 @@ public class UtilityClass {
 	}
 }
 ```
+
 ### /src/test/java/com/clarity/business/ClientBOTest.java
+
 ```
 package com.clarity.business;
 
@@ -797,7 +844,9 @@ public class ClientBOTest {
 
 }
 ```
+
 ### /src/test/java/com/clarity/business/ClientBOTestRefactored.java
+
 ```
 package com.clarity.business;
 
@@ -886,7 +935,9 @@ public class ClientBOTestRefactored {
 
 }
 ```
+
 ### /src/test/java/com/in28minutes/business/TodoBusinessImplMockitoInjectMocksTest.java
+
 ```
 package com.in28minutes.business;
 
@@ -984,7 +1035,9 @@ public class TodoBusinessImplMockitoInjectMocksTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/business/TodoBusinessImplMockitoRulesTest.java
+
 ```
 package com.in28minutes.business;
 
@@ -1086,7 +1139,9 @@ public class TodoBusinessImplMockitoRulesTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java
+
 ```
 package com.in28minutes.business;
 
@@ -1183,7 +1238,9 @@ public class TodoBusinessImplMockitoTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java
+
 ```
 package com.in28minutes.business;
 
@@ -1208,7 +1265,9 @@ public class TodoBusinessImplStubTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/data/stub/TodoServiceStub.java
+
 ```
 package com.in28minutes.data.stub;
 
@@ -1228,7 +1287,9 @@ public class TodoServiceStub implements TodoService {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/junit/helper/ArraysCompareTest.java
+
 ```
 package com.in28minutes.junit.helper;
 
@@ -1266,7 +1327,9 @@ public class ArraysCompareTest {
 
 }
 ```
+
 ### /src/test/java/com/in28minutes/junit/helper/ArraysTest.java
+
 ```
 package com.in28minutes.junit.helper;
 
@@ -1286,7 +1349,9 @@ public class ArraysTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/junit/helper/QuickBeforeAfterTest.java
+
 ```
 package com.in28minutes.junit.helper;
 
@@ -1332,7 +1397,9 @@ public class QuickBeforeAfterTest {
 
 }
 ```
+
 ### /src/test/java/com/in28minutes/junit/helper/StringHelperParameterizedTest.java
+
 ```
 package com.in28minutes.junit.helper;
 
@@ -1377,7 +1444,9 @@ public class StringHelperParameterizedTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/junit/helper/StringHelperTest.java
+
 ```
 package com.in28minutes.junit.helper;
 
@@ -1424,7 +1493,9 @@ public class StringHelperTest {
 	
 }
 ```
+
 ### /src/test/java/com/in28minutes/junit/suite/DummyTestSuite.java
+
 ```
 package com.in28minutes.junit.suite;
 
@@ -1441,7 +1512,9 @@ public class DummyTestSuite {
 
 }
 ```
+
 ### /src/test/java/com/in28minutes/mockito/FirstMockitoTest.java
+
 ```
 package com.in28minutes.mockito;
 
@@ -1458,7 +1531,9 @@ public class FirstMockitoTest {
 
 }
 ```
+
 ### /src/test/java/com/in28minutes/mockito/HamcrestMatcherTest.java
+
 ```
 package com.in28minutes.mockito;
 
@@ -1501,7 +1576,9 @@ public class HamcrestMatcherTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/mockito/ListTest.java
+
 ```
 package com.in28minutes.mockito;
 
@@ -1574,7 +1651,9 @@ public class ListTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/mockito/SpyTest.java
+
 ```
 package com.in28minutes.mockito;
 
@@ -1619,7 +1698,9 @@ public class SpyTest {
 
 }
 ```
+
 ### /src/test/java/com/in28minutes/powermock/PowerMockitoMockingStaticMethodTest.java
+
 ```
 package com.in28minutes.powermock;
 
@@ -1671,7 +1752,9 @@ public class PowerMockitoMockingStaticMethodTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/powermock/PowerMockitoTestingPrivateMethodTest.java
+
 ```
 package com.in28minutes.powermock;
 

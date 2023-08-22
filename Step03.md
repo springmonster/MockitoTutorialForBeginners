@@ -1,13 +1,17 @@
 ## What You Will Learn during this Step:
+
 - What is a stub?
 - Create an unit test using Stub?
 - Disadvantages of Stubs
 
 ## Exercise
+
 - Improve the asserts for the ArrayList in the test TodoBusinessImplStubTest.
 
 ## Files List
+
 ### /pom.xml
+
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -31,7 +35,9 @@
 	</dependencies>
 </project>
 ```
+
 ### /src/main/java/com/in28minutes/business/TodoBusinessImpl.java
+
 ```
 package com.in28minutes.business;
 
@@ -59,7 +65,9 @@ public class TodoBusinessImpl {
 	}
 }
 ```
+
 ### /src/main/java/com/in28minutes/data/api/TodoService.java
+
 ```
 package com.in28minutes.data.api;
 
@@ -70,7 +78,9 @@ public interface TodoService {
 	public List<String> retrieveTodos(String user);
 }
 ```
+
 ### /src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java
+
 ```
 package com.in28minutes.business;
 
@@ -95,7 +105,9 @@ public class TodoBusinessImplStubTest {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/data/stub/TodoServiceStub.java
+
 ```
 package com.in28minutes.data.stub;
 
@@ -111,7 +123,9 @@ public class TodoServiceStub implements TodoService {
 	}
 }
 ```
+
 ### /src/test/java/com/in28minutes/mockito/FirstMockitoTest.java
+
 ```
 package com.in28minutes.mockito;
 

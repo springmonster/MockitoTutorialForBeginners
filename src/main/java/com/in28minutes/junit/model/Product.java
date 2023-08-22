@@ -5,11 +5,11 @@ package com.in28minutes.junit.model;
  */
 public interface Product {
 
-	long getId();
+    long getId();
 
-	String getName();
+    String getName();
 
-	ProductType getType();
+    ProductType getType();
 
-	Amount getAmount();
+    Amount getAmount();
 }
