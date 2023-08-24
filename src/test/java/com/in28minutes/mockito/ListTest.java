@@ -1,14 +1,15 @@
 package com.in28minutes.mockito;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.willThrow;
 import static org.mockito.Mockito.mock;
@@ -39,20 +40,24 @@ public class ListTest {
         assertNull(list.get(1));
     }
 
-    @Test(expected = RuntimeException.class)
+    @Test
     public void letsMockListGetToThrowException() {
         List<String> list = mock(List.class);
         when(list.get(Mockito.anyInt())).thenThrow(
                 new RuntimeException("Something went wrong"));
-        list.get(0);
+        assertThrows(RuntimeException.class, () -> {
+            list.get(0);
+        });
     }
 
-    @Test(expected = RuntimeException.class)
+    @Test
     public void letsMockListGetToThrowExceptionUsingGiven() {
         List<String> list = mock(List.class);
         willThrow(new RuntimeException("Something went wrong"))
                 .given(list).get(Mockito.anyInt());
-        list.get(0);
+        assertThrows(RuntimeException.class, () -> {
+            list.get(0);
+        });
     }
 
 

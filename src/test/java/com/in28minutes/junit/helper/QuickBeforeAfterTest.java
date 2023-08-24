@@ -1,19 +1,19 @@
 package com.in28minutes.junit.helper;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class QuickBeforeAfterTest {
 
-    @BeforeClass
+    @BeforeAll
     public static void beforeClass() {
         System.out.println("Before Class");
     }
 
-    @Before
+    @BeforeEach
     public void setup() {
         System.out.println("Before Test");
     }
@@ -28,12 +28,12 @@ public class QuickBeforeAfterTest {
         System.out.println("test2 executed");
     }
 
-    @After
+    @AfterEach
     public void teardown() {
         System.out.println("After test");
     }
 
-    @AfterClass
+    @AfterAll
     public static void afterClass() {
         System.out.println("After Class");
     }

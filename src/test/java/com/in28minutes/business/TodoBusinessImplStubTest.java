@@ -2,11 +2,11 @@ package com.in28minutes.business;
 
 import com.in28minutes.data.api.TodoService;
 import com.in28minutes.data.stub.TodoServiceStub;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TodoBusinessImplStubTest {
 

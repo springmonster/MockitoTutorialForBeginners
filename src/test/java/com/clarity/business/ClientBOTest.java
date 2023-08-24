@@ -9,13 +9,15 @@ import com.in28minutes.junit.model.Currency;
 import com.in28minutes.junit.model.Product;
 import com.in28minutes.junit.model.ProductImpl;
 import com.in28minutes.junit.model.ProductType;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 public class ClientBOTest {
 
@@ -40,7 +42,7 @@ public class ClientBOTest {
         assertEquals(new BigDecimal("11.0"), temp.getValue());
     }
 
-    @Test(expected = DifferentCurrenciesException.class)
+    @Test
     public void testClientProductSum1() throws DifferentCurrenciesException {
 
         List<Product> products = new ArrayList<Product>();
@@ -56,7 +58,9 @@ public class ClientBOTest {
         @SuppressWarnings("unused")
         Amount temp = null;
 
-        temp = clientBO.getClientProductsSum(products);
+        assertThrows(DifferentCurrenciesException.class, () -> {
+            clientBO.getClientProductsSum(products);
+        });
     }
 
     @Test

@@ -1,13 +1,14 @@
 package com.in28minutes.mockito;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
-import static org.mockito.Mockito.stub;
 import static org.mockito.Mockito.verify;
 
 public class SpyTest {
@@ -31,7 +32,7 @@ public class SpyTest {
         listSpy.add("Ranga");
         listSpy.add("in28Minutes");
 
-        stub(listSpy.size()).toReturn(-1);
+        doReturn(-1).when(listSpy).size();
 
         assertEquals(-1, listSpy.size());
         assertEquals("Ranga", listSpy.get(0));
