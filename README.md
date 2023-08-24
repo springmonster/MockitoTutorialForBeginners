@@ -4,6 +4,11 @@
 
 - [Mockito doc](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html)
 
+## Blogs
+
+- [Blogs](https://www.baeldung.com/mockito-series)
+
+
 ## Gain expertise on the most popular java mocking framework
 
 * [Installing Eclipse, Maven and Java](#installing-tools)
