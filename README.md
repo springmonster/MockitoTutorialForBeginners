@@ -7,7 +7,8 @@
 ## Blogs
 
 - [Blogs](https://www.baeldung.com/mockito-series)
-
+- [Blogs2](https://www.tutorialspoint.com/mockito/index.htm)
+- [Mockito 5 Supports Mocking Constructors, Static Methods and Final Classes out of the Box](https://www.infoq.com/news/2023/01/mockito-5/)
 
 ## Gain expertise on the most popular java mocking framework
 
